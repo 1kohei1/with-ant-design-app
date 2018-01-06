@@ -1,7 +1,17 @@
 import Layout from '../index.js'
 import { Form, Select, InputNumber, DatePicker, Switch, Slider, Button, LocaleProvider } from 'antd'
+import BaseStyle from 'antd/lib/style/index.css';
+import FormStyle from 'antd/lib/form/style/index.css';
+import SelectStyle from 'antd/lib/select/style/index.css';
+import InputNumberStyle from 'antd/lib/input-number/style/index.css';
+import DatePickerStyle from 'antd/lib/date-picker/style/index.css';
+import SwitchStyle from 'antd/lib/switch/style/index.css';
+import SliderStyle from 'antd/lib/slider/style/index.css';
+import ButtonStyle from 'antd/lib/button/style/index.css';
+import LocalProviderStyle from 'antd/lib/locale-provider/style/index.css';
 import enUS from 'antd/lib/locale-provider/en_US'
 
+const style = BaseStyle + FormStyle + SelectStyle + InputNumberStyle + DatePickerStyle + SwitchStyle + SliderStyle + ButtonStyle + LocalProviderStyle;
 const FormItem = Form.Item
 const Option = Select.Option
 
@@ -69,5 +79,6 @@ export default () => (
         </Form>
       </div>
     </LocaleProvider>
+    <style jsx global>{style}</style>
   </Layout>
 )
